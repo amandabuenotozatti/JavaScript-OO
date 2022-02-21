@@ -24,3 +24,10 @@
 - What are the advantages of having code where we use classes and composition instead of primitive types
 - Value types and reference types
 - Dynamically changing an object
+
+### Accessing Private Attributes
+- Differences between null and undefined
+- Deepening the concepts of references to a memory space
+- Getters and Setters
+- Best-in-class encapsulation
+- Protecting sensitive attributes

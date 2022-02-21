@@ -1,8 +1,24 @@
+import { Client } from "./Client.js";
+
 export class CheckingAccount {
     agency;
+    _client;
     _balance = 0;
     //By default in JS we use the "_" to indicate that an attribute is private and should not be changed.
 
+    set cliente(newValue) {
+        if(newValue instanceof Client) {
+            this._client = newValue;
+        }
+    }
+
+    get cliente() {
+        return this._client;
+    }
+
+    get saldo() {
+        return this._balance;
+    }
 
     withdraw(value) {
         if(this._balance >= value) {
