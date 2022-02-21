@@ -1,6 +1,6 @@
-class CheckingAccount {
+export class CheckingAccount {
     agency;
-    _balance;
+    _balance = 0;
     //By default in JS we use the "_" to indicate that an attribute is private and should not be changed.
 
 
@@ -15,22 +15,9 @@ class CheckingAccount {
         if(value <= 0) return;
         this._balance += value;
     }
+
+    transfer(value, checkingAccount) {
+        const amountWithdraw = this.withdraw(value);
+        checkingAccount.deposit(amountWithdraw);
+    }
 }
-
-
-// JS is an open scope language and therefore it is possible 
-// to visualize any attribute or property of our class
-
-const checkingAccount1 = new CheckingAccount();
-const checkingAccount2 = new CheckingAccount();
-
-
-
-checkingAccount1.agency = 4444;
-checkingAccount1.balance = 200;
-
-checkingAccount2.agency = 4445;
-checkingAccount2.balance = 0;
-
-checkingAccount1.withdraw(50);
-console.log(checkingAccount1.balance);

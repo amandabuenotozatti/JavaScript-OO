@@ -17,3 +17,10 @@
 - Encapsulation
 - Private attribute proposal
 - Return and early return
+
+### Modular Programming
+- Package.json
+- Modules import/export
+- What are the advantages of having code where we use classes and composition instead of primitive types
+- Value types and reference types
+- Dynamically changing an object
