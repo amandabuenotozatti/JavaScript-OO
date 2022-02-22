@@ -1,10 +1,12 @@
 import { Client } from "./Client.js";
 
 export class CheckingAccount {
+    static accountNumber = 0;
     agency;
     _client;
     _balance = 0;
     //By default in JS we use the "_" to indicate that an attribute is private and should not be changed.
+
 
     set cliente(newValue) {
         if(newValue instanceof Client) {
@@ -18,6 +20,12 @@ export class CheckingAccount {
 
     get saldo() {
         return this._balance;
+    }
+
+    constructor(agency, client) {
+        this.agency = agency;
+        this.client = client;
+        CheckingAccount.accountNumber += 1;
     }
 
     withdraw(value) {

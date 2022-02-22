@@ -31,3 +31,9 @@
 - Getters and Setters
 - Best-in-class encapsulation
 - Protecting sensitive attributes
+
+### Constructors and static attributes
+- Builders
+- Encapsulation
+- "Readonly" attributes
+- Static attributes
